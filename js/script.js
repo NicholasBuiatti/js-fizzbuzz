@@ -8,30 +8,30 @@
 // Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
 const myUl = document.querySelector('ul');
-
+myUl.className = 'list-group flex-row flex-wrap justify-content-between text-center'
 for (let i = 1; i <= 100; i++) {
     
     if (i % (3 * 5) == 0) {
         myUl.innerHTML = myUl.innerHTML + `
-        <li>
+        <li class='list-group-item rounded-3 bg-light col-1 p-3 m-2'>
             'FizzBuzz'
         </li>`
         console.log('FizzBuzz')
     } else if (i % 5 == 0) {
         myUl.innerHTML = myUl.innerHTML + `
-        <li>
+        <li class='list-group-item rounded-3 bg-warning col-1 p-3 m-2'>
             'Buzz'
         </li>`
         console.log('Buzz')
     } else if (i % 3 == 0) {
         myUl.innerHTML = myUl.innerHTML + `
-        <li>
+        <li class='list-group-item rounded-3 bg-info col-1 p-3 m-2'>
             'Fizz'
         </li>`
         console.log('Fizz');
     } else {
         myUl.innerHTML = myUl.innerHTML + `
-        <li>
+        <li class='list-group-item rounded-3 bg-danger col-1 p-3 m-2'>
             ${i}
         </li>`
         console.log(i)
