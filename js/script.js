@@ -7,3 +7,35 @@
 // Scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
 // Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
+const myUl = document.querySelector('ul');
+
+for (let i = 1; i <= 100; i++) {
+    
+    if (i % (3 * 5) == 0) {
+        myUl.innerHTML = myUl.innerHTML + `
+        <li>
+            'FizzBuzz'
+        </li>`
+        console.log('FizzBuzz')
+    } else if (i % 5 == 0) {
+        myUl.innerHTML = myUl.innerHTML + `
+        <li>
+            'Buzz'
+        </li>`
+        console.log('Buzz')
+    } else if (i % 3 == 0) {
+        myUl.innerHTML = myUl.innerHTML + `
+        <li>
+            'Fizz'
+        </li>`
+        console.log('Fizz');
+    } else {
+        myUl.innerHTML = myUl.innerHTML + `
+        <li>
+            ${i}
+        </li>`
+        console.log(i)
+    }
+    
+}
+
